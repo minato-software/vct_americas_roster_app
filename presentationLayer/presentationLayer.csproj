@@ -27,4 +27,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataDomain\DataDomain.csproj" />
+  </ItemGroup>
+
 </Project>
