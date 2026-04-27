@@ -23,9 +23,11 @@ namespace presentationLayer
                 newPictureBox.Name = team.TeamName;
                 newPictureBox.ImageLocation = team.TeamLogoImagePath;
                 newPictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+
+                // click event to set the selected team
                 newPictureBox.Click += (sender, e) =>
                 {
-                    selectedTeam = Teams.FirstOrDefault(x => x.TeamName == newPictureBox.Name);
+                    selectedTeam = Teams.FirstOrDefault(team => team.TeamName == newPictureBox.Name);
                     label2.Text = selectedTeam.TeamName;
                 };
 

@@ -32,6 +32,10 @@ namespace presentationLayer
             else
             {
                 _team = team;
+                // set fields
+                // TODO: fill more fields
+                txtTeamName.Text = _team.TeamName;
+
             }
 
             // this controls if the form opens in readonly mode or edit mode
@@ -48,7 +52,7 @@ namespace presentationLayer
         {
             // save data
             // TODO: add the rest of the properties - and modify saveTeam logic to overwrite if the team already exists instead of adding duplicates
-            _team.TeamName = txtTeamName.Text;
+            _team.TeamName = txtTeamName.Text; // TODO: figure out how to handle updating a team name. 
             _team.CoachName = txtCoachName.Text;
 
             // this will look better when a combo box is used
