@@ -204,6 +204,7 @@
             btnSaveTeam.TabIndex = 16;
             btnSaveTeam.Text = "Save Team";
             btnSaveTeam.UseVisualStyleBackColor = true;
+            btnSaveTeam.Click += btnSaveTeam_Click;
             // 
             // btnCancel
             // 
@@ -214,6 +215,7 @@
             btnCancel.TabIndex = 17;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmTeam
             // 
