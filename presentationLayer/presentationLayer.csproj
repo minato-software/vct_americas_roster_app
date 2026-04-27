@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataDomain\DataDomain.csproj" />
+    <ProjectReference Include="..\logicLayer\LogicLayer.csproj" />
   </ItemGroup>
 
 </Project>

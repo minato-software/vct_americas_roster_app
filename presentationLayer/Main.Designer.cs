@@ -46,6 +46,7 @@
             btnUpdateTeam = new Button();
             btnDeleteTeam = new Button();
             label1 = new Label();
+            label2 = new Label();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picLogo2).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Controls.Add(picLogo1);
             flowLayoutPanel1.Controls.Add(picLogo2);
             flowLayoutPanel1.Controls.Add(picLogo3);
@@ -79,7 +81,7 @@
             flowLayoutPanel1.Margin = new Padding(2, 1, 2, 1);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(3, 2, 3, 2);
-            flowLayoutPanel1.Size = new Size(341, 364);
+            flowLayoutPanel1.Size = new Size(341, 361);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // picLogo1
@@ -245,6 +247,7 @@
             btnUpdateTeam.TabIndex = 3;
             btnUpdateTeam.Text = "Update a Team";
             btnUpdateTeam.UseVisualStyleBackColor = true;
+            btnUpdateTeam.Click += btnUpdateTeam_Click;
             // 
             // btnDeleteTeam
             // 
@@ -267,12 +270,22 @@
             label1.TabIndex = 5;
             label1.Text = "VCT Americas Roster Engine";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(434, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 6;
+            label2.Text = "label2";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(642, 449);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnDeleteTeam);
             Controls.Add(btnUpdateTeam);
@@ -319,5 +332,6 @@
         private Button btnUpdateTeam;
         private Button btnDeleteTeam;
         private Label label1;
+        private Label label2;
     }
 }
