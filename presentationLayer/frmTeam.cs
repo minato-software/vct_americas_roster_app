@@ -60,7 +60,7 @@ namespace presentationLayer
             {
                 foreach (TeamLogo item in cboTeamLogo.Items)
                 {
-                    if (item.FilePath == _team.TeamLogoImagePath)
+                    if (item.FileName == _team.TeamLogoImagePath)
                     {
                         cboTeamLogo.SelectedItem = item;
                         break;

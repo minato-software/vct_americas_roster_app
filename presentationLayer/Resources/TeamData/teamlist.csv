@@ -1,12 +1,12 @@
-100 Thieves,Nbs,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\100t_logo.png,Asuna|Cryo|Bang|Timotino|Vora
-NRG,bonkar,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\nrg_logo.png,Ethan|keiko|brawk|mada|skuba
-LOUD,Romanilly,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\loud_logo.png,lukxo|Darker|Virtyy|erde|cauanzin
-KRU,ZONYK,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\kru_logo.png,saadhak|mwzera|silentzz|Less|Dantedeu5
-G2 Esports,JoshRT,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\g2_logo.png,valyn|jawgemo|BABYBAY|trent|leaf
-MIBR,fRoD,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\mibr_logo.png,zekken|tex|Mazino|Verno|aspas
-LEVIATAN,Onur,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\lev_logo.png,kiNgg|spike|blowz|Neon|Sato
-Cloud9,Immi,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\c9_logo.png,Xeppaa|v1c|Zellsis|Jackk
-Sentinels,Ewok,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\sen_logo.png,johnqt|Reduxx|Jerrwin|cortezia|JonahP
-ENVY,Stunner,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\envy_logo.png,P0PPIN|Eggster|Demon1|Rossy|keznit
-Evil Geniuses,Potter,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\eg_logo.png,C0M|supamen|bao|Okeanos|dgzin
-FURIA,shaW,C:\Users\sprin\Downloads\vct_americas_roster_app\presentationLayer\bin\Debug\net8.0-windows\Resources\TeamLogos\furia_logo.png,artzin|nerve|eeiu|koalanoob|alym
+100 Thieves,Nbs,100t_logo,Asuna|Cryo|Bang|Timotino|Vora
+NRG,bonkar,nrg_logo,Ethan|keiko|brawk|mada|skuba
+FURIA,shaW,furia_logo,artzin|nerve|eeiu|koalanoob|alym
+Evil Geniuses,Potter,eg_logo,C0M|supamen|bao|Okeanos|dgzin
+ENVY,Stunner,envy_logo,P0PPIN|Eggster|Demon1|Rossy|keznit
+Sentinels,Ewok,sen_logo,johnqt|Reduxx|Jerrwin|cortezia|JonahP
+Cloud9,Immi,c9_logo,Xeppaa|v1c|Zellsis|Jackk
+LEVIATAN,Onur,lev_logo,kiNgg|spike|blowz|Neon|Sato
+MIBR,fRoD,mibr_logo,zekken|tex|Mazino|Verno|aspas
+G2 Esports,JoshRT,g2_logo,valyn|jawgemo|BABYBAY|trent|leaf
+KRU,ZONYK,kru_logo,saadhak|mwzera|silentzz|Less|Dantedeu5
+LOUD,Romanilly,loud_logo,lukxo|Darker|Virtyy|erde|cauanzin
