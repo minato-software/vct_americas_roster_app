@@ -33,7 +33,7 @@ namespace presentationLayer
                 newPictureBox.Name = team.TeamName;
                 newPictureBox.ImageLocation = Directory.GetCurrentDirectory() + AppConstants.TeamLogos + "\\" +  team.TeamLogoImagePath + ".png";
 
-                newPictureBox.Size = new Size(100, 100);
+                newPictureBox.Size = new Size(200, 200);
                 newPictureBox.SizeMode = PictureBoxSizeMode.Zoom; // first tried centerImage, maybe zoom better
                 newPictureBox.Padding = new Padding(5);
 
