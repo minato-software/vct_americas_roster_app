@@ -8,7 +8,31 @@ namespace LogicLayer
     public class TeamManager
     {
         TeamDataAccessor _teamDataAccessor = null;
-        
+
+        public bool DeleteTeam(Team selectedTeam)
+        {
+            bool result = false;
+
+            try
+            {
+                if (_teamDataAccessor == null)
+                {
+                    _teamDataAccessor = new TeamDataAccessor();
+                }
+
+                if (_teamDataAccessor.DeleteTeam(selectedTeam))
+                {
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Save failed.", ex);
+            }
+
+            return result;
+        }
+
         public List<Team> GetTeamList()
         {
             List<Team> fruits = null;
@@ -28,7 +52,24 @@ namespace LogicLayer
             return fruits;
         }
 
-        public bool SaveTeam(Team team)
+        public List<TeamLogo> GetTeamLogos()
+        {
+            try
+            {
+                if (_teamDataAccessor == null)
+                {
+                    _teamDataAccessor = new TeamDataAccessor();
+                }
+
+                return _teamDataAccessor.GetTeamLogos();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Couldn't load team logos.", ex);
+            }
+        }
+
+        public bool SaveTeam(Team team, string originalTeamName = null)
         {
             bool result = false;
 
@@ -39,7 +80,7 @@ namespace LogicLayer
                     _teamDataAccessor = new TeamDataAccessor();
                 }
 
-                if (_teamDataAccessor.SaveTeam(team))
+                if (_teamDataAccessor.SaveTeam(team, originalTeamName))
                 {
                     result = true;
                 }

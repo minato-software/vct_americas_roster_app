@@ -8,6 +8,8 @@ namespace DataDomain
 {
     public static class AppConstants
     {
-        public static string DataFolder { get; } = "TeamData";
+        public static string TeamData { get; } = "\\Resources\\TeamData\\teamlist.csv";
+        public static string PlayerData { get; } = "\\Resources\\PlayerData\\playerlist.csv";
+        public static string TeamLogos { get; } = "\\Resources\\TeamLogos";
     }
 }

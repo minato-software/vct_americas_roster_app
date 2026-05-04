@@ -46,6 +46,7 @@
             btnEditTeam = new Button();
             btnSaveTeam = new Button();
             btnCancel = new Button();
+            cboTeamLogo = new ComboBox();
             SuspendLayout();
             // 
             // lblCreateATeam
@@ -217,11 +218,20 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
+            // cboTeamLogo
+            // 
+            cboTeamLogo.FormattingEnabled = true;
+            cboTeamLogo.Location = new Point(145, 63);
+            cboTeamLogo.Name = "cboTeamLogo";
+            cboTeamLogo.Size = new Size(121, 23);
+            cboTeamLogo.TabIndex = 18;
+            // 
             // frmTeam
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 453);
+            Controls.Add(cboTeamLogo);
             Controls.Add(btnCancel);
             Controls.Add(btnSaveTeam);
             Controls.Add(btnEditTeam);
@@ -267,5 +277,6 @@
         private Button btnEditTeam;
         private Button btnSaveTeam;
         private Button btnCancel;
+        private ComboBox cboTeamLogo;
     }
 }

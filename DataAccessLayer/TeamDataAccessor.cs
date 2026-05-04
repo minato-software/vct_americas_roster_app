@@ -5,8 +5,10 @@ namespace DataAccessLayer
 {
     public class TeamDataAccessor
     {
-        private string teamsFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\teamlist.csv";
-        private string playersFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\playerlist.csv";
+        private string teamsFilePath = Directory.GetCurrentDirectory() + AppConstants.TeamData;
+        //private string teamsFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\teamlist.csv";
+        private string playersFilePath = Directory.GetCurrentDirectory() + AppConstants.PlayerData;
+        //private string playersFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\playerlist.csv";
 
         public List<Team> GetTeams()
         {
@@ -57,13 +59,55 @@ namespace DataAccessLayer
             return teams;
         }
 
-        // TODO: add logic for updating a team instead of adding a new one everytime we save. Updating a team name could cause problems here
-        public bool SaveTeam(Team team)
+        public List<TeamLogo> GetTeamLogos()
+        {
+            List<TeamLogo> logos = new List<TeamLogo>();
+
+            try
+            {
+                string logoDirectory = Directory.GetCurrentDirectory() + AppConstants.TeamLogos;
+                if (Directory.Exists(logoDirectory))
+                {
+                    var files = Directory.GetFiles(logoDirectory, "*.png");
+                    foreach (string file in files)
+                    {
+                        logos.Add(new TeamLogo
+                        {
+                            FileName = Path.GetFileName(file),
+                            FilePath = file
+                        });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error loading team logos", ex);
+            }
+            return logos;
+        }
+        
+        public bool SaveTeam(Team team, string originalTeamName = null)
         {
             var teams = GetTeams();
+
+            // use original team name if it is already provided, otherwise use the current choice
+            string targetName = string.IsNullOrEmpty(originalTeamName) ? team.TeamName : originalTeamName;
+
+            // look for the existing team
+            var existingTeam = teams.FirstOrDefault(team => team.TeamName == targetName);
+
+            if (existingTeam != null)
+            {
+
+                // remove the old one so we can overwrite it
+                teams.Remove(existingTeam);
+            }
+
             teams.Add(team);
             return SaveTeams(teams);
+
         }
+
 
         public bool SaveTeams(List<Team> teams)
         {
@@ -127,8 +171,9 @@ namespace DataAccessLayer
         {
             Team team = new Team();
             var parts = csvLine.Split(',');
-            // TODO: update this if condition maybe?
-            if (parts.Count() >= 0)
+
+            
+            if (parts.Length >= 4)
             {
                 team.TeamName = parts[0];
                 team.CoachName = parts[1];
@@ -159,15 +204,29 @@ namespace DataAccessLayer
         {
             Player player = new Player();
             var parts = csvLine.Split(',');
-            // TODO: update this if condition maybe?
-            if (parts.Count() >= 0)
+            
+            if (parts.Length >= 1)
             {
                 player.PlayerInGameName = parts[0];
-                player.PortraitFilePath = parts[1];
+                
             }
             return player;
         }
 
+        public bool DeleteTeam(Team selectedTeam)
+        {
+            var teams = GetTeams();
+
+            // look for the existing team
+            var existingTeam = teams.FirstOrDefault(team => team.TeamName == selectedTeam.TeamName);
+
+            if (existingTeam != null)
+            {
+                teams.Remove(existingTeam);
+            }
+
+            return SaveTeams(teams);
+        }
     }
 
     public static class PlayerListExtensions
