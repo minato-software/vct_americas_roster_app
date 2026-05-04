@@ -157,7 +157,7 @@ namespace presentationLayer
             if (cboTeamLogo.SelectedItem != null)
             {
                 TeamLogo selectedLogo = (TeamLogo)cboTeamLogo.SelectedItem;
-                _team.TeamLogoImagePath = selectedLogo.FilePath;
+                _team.TeamLogoImagePath = selectedLogo.FileName;
             }
 
             // pass original team name to handle overwrites properly

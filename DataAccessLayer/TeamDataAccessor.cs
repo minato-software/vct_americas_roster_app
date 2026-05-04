@@ -6,9 +6,7 @@ namespace DataAccessLayer
     public class TeamDataAccessor
     {
         private string teamsFilePath = Directory.GetCurrentDirectory() + AppConstants.TeamData;
-        //private string teamsFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\teamlist.csv";
         private string playersFilePath = Directory.GetCurrentDirectory() + AppConstants.PlayerData;
-        //private string playersFilePath = FileStorage.GetFilePathForUser(AppConstants.DataFolder) + "\\playerlist.csv";
 
         public List<Team> GetTeams()
         {
